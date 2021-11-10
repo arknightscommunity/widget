@@ -1,6 +1,6 @@
 var now = new Date();
 
-var imgsrc = 'https://cdn.jsdelivr.net/gh/arknightscommunity/widget@2.0/res/';
+var imgsrc = 'https://cdn.jsdelivr.net/gh/arknightscommunity/widget@2.0.20211111/res/';
 
 var json_src = 'https://arknightscommunity.drblack-system.com/Extend/daily-msg/'
 
