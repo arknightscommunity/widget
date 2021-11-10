@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
             $("#d_o").append('今天是干员<span class="op-bir">'+ops.join('、')+'</span>的生日。')
         }
     })
-    $.getJSON('https://cdn.jsdelivr.net/gh/arknightscommunity/widget@2.0.20211111/activity.json',function (activity) {
+    $.getJSON('https://cdn.jsdelivr.net/gh/arknightscommunity/widget@latest/activity.json',function (activity) {
         if (activity.length==0) { } else {
             $("#daily").append("<div id='d_a'></div>");
             var idx=0;
