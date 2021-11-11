@@ -10,12 +10,12 @@ jQuery(document).ready(function ($) {
         $("#d_r").append("<div class='d-item d-r' id='d_res'>物资筹备：</div>");
         daily_res[0].forEach(item => {
             src = imgsrc+item.src
-            $("#d_res").append('<img src='+src+' name='+item.name+' alt='+item.name+' class="d-res">')
+            $("#d_res").append('<img src='+src+' title='+item.name+' alt='+item.name+' class="d-res">')
         });
         $("#d_r").append("<div class='d-item d-r' id='d_chip'>芯片搜索：</div>");
         daily_res[1].forEach(item => {
             src = imgsrc+item.src
-            $("#d_chip").append('<img src='+src+' name='+item.name+' alt='+item.name+' class="d-chip">')
+            $("#d_chip").append('<img src='+src+' title='+item.name+' alt='+item.name+' class="d-chip">')
         });
     });
     $.getJSON(json_src+'op_birthday.json',function (ops) {
