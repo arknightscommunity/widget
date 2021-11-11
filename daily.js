@@ -1,6 +1,8 @@
 var now = new Date();
 
-var reposrc = 'https://cdn.jsdelivr.net/gh/arknightscommunity/widget@main/';
+// var reposrc = 'https://cdn.jsdelivr.net/gh/arknightscommunity/widget@main/';
+var reposrc  = './'
+
 
 var json_src = 'https://arknightscommunity.drblack-system.com/Extend/daily-msg/'
 
@@ -62,5 +64,31 @@ jQuery(document).ready(function ($) {
                 }
             });
         }
+    })
+    $.getJSON(reposrc+'gacha.json',function (gacha) {
+        $("#daily").append("<div class='d-item' id='d_g'></div>");
+        var gacha_series = 1;
+        gacha[0].forEach(item => {
+            gacha_series+=1;
+            var id_name = 'pool'+String(gacha_series);
+            $("#d_g").append("<details id='"+id_name+"'></details>");
+            $("#"+id_name).append("<summary id='t_"+id_name+"'><span class='pool-lim'>"+item.name+"</span> </summary>");
+            if (now.getTime()<new Date(item.start)) {
+                $("#t_"+id_name).append("即将开启");
+            } else if (now.getTime()<new Date(item.end)) {
+                var t = new Date(item.end).getTime()-now.getTime();
+                var t_d = Math.floor(t/(24*3600*1000));
+                var t_h = Math.floor(t%(24*3600*1000)/(3600*1000));
+                if (t_d>=1) {
+                    $("#t_"+id_name).append("剩余 "+String(t_d)+" 天");
+                } else {
+                    $("#t_"+id_name).append("剩余 "+String(t_h)+" 小时");
+                }
+            } else {
+                $("#t_"+id_name).append("已结束");
+            }
+            $("#"+id_name).append("<div class='d-item'><span class='luck6'>★★★★★★</span>："+item.up[0]+"</div>");
+            $("#"+id_name).append("<a href='"+item.link+"'>&emsp;<u>查看详情</u></a>");
+        });
     })
 });

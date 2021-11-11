@@ -10,9 +10,9 @@
         "end":"2021/11/29 03:59:59"
     }],[{
         "title":"更新指引",
-        "name":"事件名称",
-        "start":"开始时间，格式YYYY/MM/DD HH:MM:SS",
-        "end":"结束时间，格式YYYY/MM/DD HH:MM:SS",
+        "name":"活动名称",
+        "start":"整个活动的开始时间，格式YYYY/MM/DD HH:MM:SS",
+        "end":"对应事件的结束时间，格式YYYY/MM/DD HH:MM:SS",
         "template":{
             "SS":"SideStory：活动名",
             "活动商店":"活动名：商店名",
