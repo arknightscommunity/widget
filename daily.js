@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
         gacha[0].forEach(item => {
             gacha_series += 1;
             var id_name = 'pool' + String(gacha_series);
-            $("#d_g").append("<details id='" + id_name + "' open></details>");
+            $("#d_g").append("<details id='" + id_name + "'></details>");
             $("#" + id_name).append("<summary id='t_" + id_name + "'><span class='pool-lim'>" + item.name + "</span> </summary>");
             if (now.getTime() < new Date(item.start)) {
                 $("#t_" + id_name).append("即将开启");
@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {
         });
         gacha[1].forEach(item => {
             if (now > new Date(item.start) && now < new Date(item.end)) {
-                $("#d_g").append("<details id='g_rout' open></details>");
+                $("#d_g").append("<details id='g_rout'></details>");
                 $("#g_rout").append("<summary id='t_rout'><span class='pool-rt'>" + item.name + "</span></summary>");
                 $("#t_rout").append(" " + TRem(item.end) + "后轮换");
                 $("#g_rout").append("<div class='g-time'>"+item.start.slice(0,-3)+' ~ '+item.end.slice(0,-3)+"</div>")
