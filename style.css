@@ -134,8 +134,29 @@
     text-shadow: 0 0 1px
 }
 
+.g-item{
+    font-size: 14px;
+    margin-left: 12px;
+}
+
+.g-more{
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.g-time{
+    font-size: 12px;
+    margin: 5px 0 8px 12px;
+}
+
 .pool-lim{
     color:rebeccapurple;
     font-weight: 600;
     text-shadow: 0px 0px 1.2px;
+}
+
+.pool-rt{
+    color:rgb(67, 26, 110);
+    font-weight: 600;
 }
